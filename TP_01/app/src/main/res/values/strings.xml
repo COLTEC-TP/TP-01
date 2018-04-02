@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieMe</string>
+    <string name="name">Movie\'s Name</string>
+    <string name="dname">Director\'s Name</string>
+    <string name="release">Year of Release</string>
+    <string name="type">Gender</string>
+    <string name="rating">Rating</string>
+    <string name="rating0">Free</string>
+    <string name="rating10">Above 10</string>
+    <string name="rating12">Above 12</string>
+    <string name="rating14">Above 14</string>
+    <string name="rating16">Above 16</string>
+    <string name="rating18">Above 18</string>
+    <string name="add">Save</string>
+</resources>

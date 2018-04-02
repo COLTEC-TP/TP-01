@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieMe</string>
+    <string name="name">Nome do Filme</string>
+    <string name="dname">Nome do Diretor</string>
+    <string name="release">Ano de Lançamento</string>
+    <string name="type">Gênero</string>
+    <string name="rating">Classificação Indicativa</string>
+    <string name="rating0">Livre</string>
+    <string name="rating10">Maiores de 10 anos</string>
+    <string name="rating12">Maiores de 12 anos</string>
+    <string name="rating14">Maiores de 14 anos</string>
+    <string name="rating16">Maiores de 16 anos</string>
+    <string name="rating18">Maiores de 18 anos</string>
+    <string name="add">Salvar</string>
+</resources>
