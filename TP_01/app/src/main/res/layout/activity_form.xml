@@ -54,7 +54,7 @@
     <RadioGroup
         android:id="@+id/indicacao"
         android:layout_width="wrap_content"
-        android:layout_height="170dp">
+        android:layout_height="200dp">
 
         <RadioButton
             android:layout_width="match_parent"
