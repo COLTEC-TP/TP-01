@@ -1,5 +1,6 @@
 package com.example.haasi.tp_01;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -26,6 +27,9 @@ public class FormActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         //Linkando o Java com o xml
         spin = findViewById(R.id.spinner2);
