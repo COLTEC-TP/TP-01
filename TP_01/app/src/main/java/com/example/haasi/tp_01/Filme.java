@@ -1,13 +1,15 @@
 package com.example.haasi.tp_01;
 
 public class Filme {
+    private Integer id;
     private String movie;
     private String type;
     private Integer rate;
-    private Integer year;
+    private String year;
     private String director;
     /**
      * Construtor
+     * @param id Identificador da DataBase
      * @param movie Nome do filme
      * @param type Gênero do filme
      * @param rate Classificação Indicativa do filme
@@ -15,7 +17,8 @@ public class Filme {
      * @param director Diretor do filme
      */
 
-    public Filme(String movie, String type, Integer rate, Integer year, String director) {
+    public Filme(Integer id, String movie, String type, Integer rate, String year, String director) {
+        this.id = id;
         this.movie = movie;
         this.type = type;
         this.rate = rate;
@@ -26,8 +29,12 @@ public class Filme {
     /**
      * Construtor padrão
      */
+    public Integer getId() {
+        return id;
+    }
+
     public Filme() {
-        this(null, null, null, null, null);
+        this(null, null, null, null, null, null);
     }
 
     public String getMovie() {
@@ -54,11 +61,11 @@ public class Filme {
         this.rate = rate;
     }
 
-    public Integer getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(String year) {
         this.year = year;
     }
 

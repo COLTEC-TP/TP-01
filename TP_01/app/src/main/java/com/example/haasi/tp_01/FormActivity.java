@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class FormActivity extends Activity {
 
@@ -52,18 +51,13 @@ public class FormActivity extends Activity {
                 String diretor1 = diretor.getText().toString();
                 String ano1 = ano.getText().toString();
                 String spin1 = String.valueOf(spin.getSelectedItemPosition());
-                String indicacao1 = String.valueOf(indicacao.getCheckedRadioButtonId());
+                Integer indicacao1 = indicacao.getCheckedRadioButtonId();
                 Context contexto = getApplicationContext();
-                Toast toast = Toast.makeText(contexto, filme1, Toast.LENGTH_SHORT);
-                toast.show();
-                toast = Toast.makeText(contexto, diretor1, Toast.LENGTH_SHORT);
-                toast.show();
-                toast = Toast.makeText(contexto, ano1, Toast.LENGTH_SHORT);
-                toast.show();
-                toast = Toast.makeText(contexto, spin1, Toast.LENGTH_SHORT);
-                toast.show();
-                toast = Toast.makeText(contexto, indicacao1, Toast.LENGTH_SHORT);
-                toast.show();
+
+
+                //Adiciona ao banco de dados
+                FilmeDAO dao = new FilmeDAO(getBaseContext());
+                boolean sucesso = dao.salvar(filme1, spin1, indicacao1, ano1, diretor1);
             }
         });
     }
