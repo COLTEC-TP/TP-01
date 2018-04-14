@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.text.Normalizer;
 
 public class FormActivity extends Activity {
 
@@ -20,7 +23,6 @@ public class FormActivity extends Activity {
     EditText ano;
     Spinner spin;
     RadioGroup indicacao;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class FormActivity extends Activity {
                 //Adiciona ao banco de dados
                 FilmeDAO dao = new FilmeDAO(getBaseContext());
                 boolean sucesso = dao.salvar(filme1, spin1, indicacao1, ano1, diretor1);
+                finish();
             }
         });
     }

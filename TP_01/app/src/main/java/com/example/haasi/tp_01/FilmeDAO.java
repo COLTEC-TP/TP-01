@@ -37,6 +37,23 @@ public class FilmeDAO {
         return gw.delete(TABLE_FILMES, "ID=?", new String[]{ id + "" }) > 0;
     }
 
+    public Filme retornaFilme(Integer identify){
+        Cursor cursor = gw.rawQuery("SELECT * FROM Filmes", null);
+        while(cursor.moveToNext()){
+            if(cursor.getInt(cursor.getColumnIndex("ID")) == identify) {
+                int id = cursor.getInt(cursor.getColumnIndex("ID"));
+                String name = cursor.getString(cursor.getColumnIndex("Name"));
+                String type = cursor.getString(cursor.getColumnIndex("Type"));
+                String year = cursor.getString(cursor.getColumnIndex("Year"));
+                Integer rate = cursor.getInt(cursor.getColumnIndex("Rate"));
+                String director = cursor.getString(cursor.getColumnIndex("Director"));
+                cursor.close();
+                return new Filme(id, name, type, rate, year, director);
+            }
+        }
+        cursor.close();
+        return null;
+    }
 
     //Retorna todos os filmes em um array list
     public ArrayList<Filme> retornarTodos(){

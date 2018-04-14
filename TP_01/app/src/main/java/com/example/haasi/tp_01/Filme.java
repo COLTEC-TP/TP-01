@@ -1,5 +1,6 @@
 package com.example.haasi.tp_01;
 
+
 public class Filme {
     private Integer id;
     private String movie;
@@ -7,6 +8,10 @@ public class Filme {
     private Integer rate;
     private String year;
     private String director;
+
+
+
+
     /**
      * Construtor
      * @param id Identificador da DataBase
@@ -26,9 +31,9 @@ public class Filme {
         this.director = director;
     }
 
-    /**
-     * Construtor padrão
-     */
+
+
+
     public Integer getId() {
         return id;
     }
