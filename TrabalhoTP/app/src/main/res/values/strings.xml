@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TrabalhoTP</string>
+    <string name="adding">Adding a movie</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleting">Deleting a movie</string>
+</resources>
