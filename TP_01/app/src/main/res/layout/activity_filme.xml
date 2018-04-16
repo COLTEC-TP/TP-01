@@ -1,56 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.haasi.tp_01.FilmeActivity">
 
-    <ImageView
-        android:id="@+id/icone"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_x="70dp"
-        android:layout_y="15dp"
-        tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/nome"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_x="30dp"
-        android:layout_y="300dp"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:textAlignment="center"
-        android:textSize="20dp"
-        android:text="TextView" />
+        android:layout_marginLeft="30dp"
+        android:text="txtffggffg gkhlkglh"
+        android:textSize="25dp" />
 
-    <TextView
-        android:id="@+id/ano"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_x="30dp"
-        android:layout_y="350dp"
-        android:textAlignment="center"
-        android:textSize="15dp"
-        android:text="TextView" />
 
-    <TextView
-        android:id="@+id/diretor"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_x="30dp"
-        android:layout_y="400dp"
-        android:textSize="15dp"
-        android:textAlignment="center"
-        android:text="TextView" />
 
     <ImageView
-        android:id="@+id/rate"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_x="246dp"
-        android:layout_y="315dp"
+        android:id="@+id/icone"
+        android:layout_width="49dp"
+        android:layout_height="51dp"
+        android:layout_above="@+id/view"
+        android:layout_marginLeft="310dp"
         tools:src="@tools:sample/avatars" />
 
 
-</AbsoluteLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="354dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="0.7dp"
+        android:layout_below="@+id/nome"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/ano"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="30dp"
+        android:textAlignment="center"
+        android:text="jgkjfkgjkk"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/diretor"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="210dp"
+        android:textAlignment="center"
+        android:text="jgkjfkgjkk"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/rate"
+        android:layout_width="225dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="320dp"
+        android:layout_centerHorizontal="true"
+        tools:src="@tools:sample/avatars" />
+
+
+</RelativeLayout>

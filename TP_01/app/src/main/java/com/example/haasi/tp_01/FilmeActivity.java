@@ -85,7 +85,7 @@ public class FilmeActivity extends Activity{
 
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
         alertBuilder.setIcon(R.mipmap.clapperboard);
-        alertBuilder.setTitle(getResources().getText(R.string.remove) + filme.getMovie() + "?");
+        alertBuilder.setTitle(getResources().getText(R.string.remove) + " " +filme.getMovie() + "?");
         alertBuilder.setMessage(getResources().getText(R.string.sure));
 
         alertBuilder.setPositiveButton(getResources().getText(R.string.yes), new DialogInterface.OnClickListener() {
