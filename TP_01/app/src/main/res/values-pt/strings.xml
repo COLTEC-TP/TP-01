@@ -2,7 +2,7 @@
     <string name="app_name">MovieMe</string>
     <string name="name">Nome do Filme</string>
     <string name="dname">Nome do Diretor</string>
-    <string name="release">Ano de Lançamento</string>
+    <string name="release">Ano</string>
     <string name="type">Gênero</string>
     <string name="rating">Classificação Indicativa</string>
     <string name="rating0">Livre</string>
@@ -12,4 +12,17 @@
     <string name="rating16">Maiores de 16 anos</string>
     <string name="rating18">Maiores de 18 anos</string>
     <string name="add">Salvar</string>
+    <string name="share">Compartilhar</string>
+    <string name="delete">Deletar</string>
+    <string name="action">Ação</string>
+    <string name="drama">Drama</string>
+    <string name="comedy">Comédia</string>
+    <string name="thriller">Suspense</string>
+    <string name="fiction">Ficção</string>
+    <string name="romance">Romance</string>
+    <string name="shareusing">Compartilhar Com:</string>
+    <string name="sure">Tem certeza?</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="remove">Deseja Excluir </string>
 </resources>
