@@ -4,12 +4,10 @@ package com.example.haasi.tp_01;
 public class Filme {
     private Integer id;
     private String movie;
-    private String type;
+    private Integer type;
     private Integer rate;
     private String year;
     private String director;
-
-
 
 
     /**
@@ -22,7 +20,7 @@ public class Filme {
      * @param director Diretor do filme
      */
 
-    public Filme(Integer id, String movie, String type, Integer rate, String year, String director) {
+    public Filme(Integer id, String movie, Integer type, Integer rate, String year, String director) {
         this.id = id;
         this.movie = movie;
         this.type = type;
@@ -50,11 +48,11 @@ public class Filme {
         this.movie = movie;
     }
 
-    public String getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 

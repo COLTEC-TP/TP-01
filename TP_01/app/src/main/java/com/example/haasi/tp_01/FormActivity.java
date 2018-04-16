@@ -4,15 +4,13 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
-
-import java.text.Normalizer;
 
 public class FormActivity extends Activity {
 
@@ -52,14 +50,14 @@ public class FormActivity extends Activity {
                 String filme1 = filme.getText().toString();
                 String diretor1 = diretor.getText().toString();
                 String ano1 = ano.getText().toString();
-                String spin1 = String.valueOf(spin.getSelectedItemPosition());
+                Integer spin1 = spin.getSelectedItemPosition();
                 Integer indicacao1 = indicacao.getCheckedRadioButtonId();
-                Context contexto = getApplicationContext();
 
+                Log.i(indicacao1.toString(),indicacao1.toString());
 
                 //Adiciona ao banco de dados
                 FilmeDAO dao = new FilmeDAO(getBaseContext());
-                boolean sucesso = dao.salvar(filme1, spin1, indicacao1, ano1, diretor1);
+                dao.salvar(filme1, spin1, indicacao1, ano1, diretor1);
                 finish();
             }
         });

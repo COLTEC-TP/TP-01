@@ -4,7 +4,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -22,7 +21,7 @@ public class FilmeDAO {
 
 
     // Adiciona o Filme na Data Base
-    public boolean salvar(String movie, String type, Integer rate, String year, String director){
+    public boolean salvar(String movie, Integer type, Integer rate, String year, String director){
 
         ContentValues cv = new ContentValues();
         cv.put("Name", movie);
@@ -43,7 +42,7 @@ public class FilmeDAO {
             if(cursor.getInt(cursor.getColumnIndex("ID")) == identify) {
                 int id = cursor.getInt(cursor.getColumnIndex("ID"));
                 String name = cursor.getString(cursor.getColumnIndex("Name"));
-                String type = cursor.getString(cursor.getColumnIndex("Type"));
+                Integer type = cursor.getInt(cursor.getColumnIndex("Type"));
                 String year = cursor.getString(cursor.getColumnIndex("Year"));
                 Integer rate = cursor.getInt(cursor.getColumnIndex("Rate"));
                 String director = cursor.getString(cursor.getColumnIndex("Director"));
@@ -62,7 +61,7 @@ public class FilmeDAO {
         while(cursor.moveToNext()){
             int id = cursor.getInt(cursor.getColumnIndex("ID"));
             String name = cursor.getString(cursor.getColumnIndex("Name"));
-            String type = cursor.getString(cursor.getColumnIndex("Type"));
+            Integer type = cursor.getInt(cursor.getColumnIndex("Type"));
             String year = cursor.getString(cursor.getColumnIndex("Year"));
             Integer rate = cursor.getInt(cursor.getColumnIndex("Rate"));
             String director = cursor.getString(cursor.getColumnIndex("Director"));
