@@ -20,6 +20,8 @@ public class MovieAdapter extends BaseAdapter {
         movies = new ArrayList();
     }
 
+
+
     public void addMovie(Movie movie){
         this.movies.add(movie);
     }
