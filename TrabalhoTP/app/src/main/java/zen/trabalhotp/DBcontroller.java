@@ -31,7 +31,7 @@ public class DBcontroller {
         if (resultado == -1)
             return "Erro ao inserir registro";
         else
-            return "Registro Inserido com sucesso";
+            return "Registro inserido com sucesso";
     }
 
     public Cursor uploadData(){
@@ -51,6 +51,17 @@ public class DBcontroller {
         db = newBase.getReadableDatabase();
         db.delete(newBase.TABLE,where,null);
         db.close();
+    }
+    public Cursor getID(String NAME){
+        Cursor cursor;
+        String[] data = {newBase.ID, newBase.NAME, newBase.GENRE, newBase.DIRECTOR, newBase.RATINGRANGE, newBase.YEAR};
+        db = newBase.getReadableDatabase();
+        cursor = db.query(newBase.TABLE, data, NewDB.NAME+"= " + NAME, null, null, null, null);
+        if(cursor != null){
+            cursor.moveToFirst();
+        }
+        db.close();
+        return cursor;
     }
 }
 

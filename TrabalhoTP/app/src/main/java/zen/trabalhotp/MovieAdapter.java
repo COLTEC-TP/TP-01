@@ -26,6 +26,13 @@ public class MovieAdapter extends BaseAdapter {
         this.movies.add(movie);
     }
 
+    public void deleteMovie(Movie movie){
+        this.movies.remove(movie);
+    }
+
+    @Override
+    public boolean isEmpty(){return movies.isEmpty();}
+
     @Override
     public int getCount() {
         return this.movies.size();

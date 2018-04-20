@@ -108,25 +108,22 @@ public class MainActivity extends AppCompatActivity{
                     }
 
                     case MotionEvent.ACTION_UP: {
-                        if(Math.abs(mDownXfinal - mDownX) > 500){
-                            adapter = new MovieAdapter(getBaseContext());
-                            Movie movie = (Movie) moviesListView.getItemAtPosition(mDownPosition);
-                            crud.deleteData(movie.getId());
-                            cursor = crud.uploadData();
-                            if(cursor.getCount() > 0) {
-                                do {
-                                    Integer id = cursor.getInt(cursor.getColumnIndex("id"));
-                                    String name = cursor.getString(cursor.getColumnIndex("name"));
-                                    String genre = cursor.getString(cursor.getColumnIndex("genre"));
-                                    String director = cursor.getString(cursor.getColumnIndex("director"));
-                                    Integer ratingRange = cursor.getInt(cursor.getColumnIndex("ratingRange"));
-                                    Integer year = cursor.getInt(cursor.getColumnIndex("year"));
-                                    Movie newMovie = new Movie(name, genre, director, ratingRange, year);
-                                    newMovie.setId(id);
-                                    adapter.addMovie(newMovie);
-                                } while (cursor.moveToNext());
+                        if(mDownView == null){
+                            return false;
+                        }
+                        mDownXfinal = event.getRawX();
+                        mDownYfinal = event.getRawY();
+                        if(Math.abs(mDownXfinal - mDownX) > 500 && !moviesListView.getAdapter().isEmpty()){
+                            Movie movie = (Movie) moviesListView.getItemAtPosition(moviesListView.getPositionForView(mDownView));
+                            if(movie == null){
+                                return false;
                             }
-                            moviesListView.setAdapter(adapter);
+                            int id = movie.getId();
+                            MovieAdapter adapter = (MovieAdapter) MainActivity.moviesListView.getAdapter();
+                            adapter.deleteMovie(movie);
+                            adapter.notifyDataSetChanged();
+                            MainActivity.moviesListView.refreshDrawableState();
+                            crud.deleteData(id);
                             Snackbar.make(moviesListView, "Movie deleted", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                         }
                     }
