@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieMe</string>
+    <string name="movie_name">Movie\'s name:</string>
+    <string name="movie_director">Director:</string>
+    <string name="movie_date">Release year:</string>
+    <string name="movie_genre">Genre:</string>
+    <string-array name="movie_choose_genre">
+        <item>Action</item>
+        <item>Thriller</item>
+        <item>Drama</item>
+        <item>Comedy</item>
+        <item>Horror</item>
+        <item>Documentary</item>
+        <item>Porn</item>
+    </string-array>
+    <string name="movie_rating">Parental Rating:</string>
+    <string name="choose_yes">Yes</string>
+    <string name="choose_no">No</string>
+    <string name="movie_delete">Delete Movie</string>
+    <string name="movie_delete_message">Are you sure you want to delete this movie?</string>
+    <string name="done">Saved Changes</string>
+    <string name="canceled">Canceled</string>
+    <string name="failed">Something went wrong, try again later.</string>
+</resources>

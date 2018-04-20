@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MovieMe</string>
+    <string name="movie_name">Nome do Filme:</string>
+    <string name="movie_director">Diretor:</string>
+    <string name="movie_date">Ano de lançamento:</string>
+    <string name="movie_genre">Genero:</string>
+    <string-array name="movie_choose_genre">
+        <item>Ação</item>
+        <item>Suspense</item>
+        <item>Drama</item>
+        <item>Comédia</item>
+        <item>Terror</item>
+        <item>Documentário</item>
+        <item>Pornográfico</item>
+    </string-array>
+    <string name="movie_rating">Classificação:</string>
+    <string name="choose_yes">Sim</string>
+    <string name="choose_no">Não</string>
+    <string name="movie_delete">Deletar Filme</string>
+    <string name="movie_delete_message">Deseja realmente deletar o filme?</string>
+    <string name="done">Alterações salvas</string>
+    <string name="canceled">Cancelado</string>
+    <string name="failed">Algo deu errado! Tente novamente mais tarde</string>
+</resources>
