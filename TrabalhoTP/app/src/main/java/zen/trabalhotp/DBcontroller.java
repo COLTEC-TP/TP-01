@@ -52,11 +52,12 @@ public class DBcontroller {
         db.delete(newBase.TABLE,where,null);
         db.close();
     }
-    public Cursor getID(String NAME){
+    public Cursor getID(Movie movie){
         Cursor cursor;
-        String[] data = {newBase.ID, newBase.NAME, newBase.GENRE, newBase.DIRECTOR, newBase.RATINGRANGE, newBase.YEAR};
+        String[] data = {newBase.ID};
+        String[] args = {movie.getName()};
         db = newBase.getReadableDatabase();
-        cursor = db.query(newBase.TABLE, data, NewDB.NAME+"= " + NAME, null, null, null, null);
+        cursor = db.query(newBase.TABLE, data, NewDB.NAME+"= ?", args, null, null, null);
         if(cursor != null){
             cursor.moveToFirst();
         }

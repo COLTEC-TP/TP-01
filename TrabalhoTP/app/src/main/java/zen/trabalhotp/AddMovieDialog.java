@@ -55,7 +55,7 @@ public class AddMovieDialog extends DialogFragment {
                             Movie movie = new Movie(name.getText().toString(), genre.getText().toString(), director.getText().toString(), Integer.parseInt(ratingRange.getText().toString()), Integer.parseInt(year.getText().toString()));
                             final DBcontroller crud = new DBcontroller(getContext());
                             crud.addData(movie.getName(), movie.getGenre(), movie.getDirector(), movie.getRatingRange(), movie.getYear());
-                            Cursor cursor = crud.getID(movie.getName());
+                            Cursor cursor = crud.getID(movie);
                             movie.setId(cursor.getInt(cursor.getColumnIndex(NewDB.ID)));
                             MovieAdapter movieAdapter = (MovieAdapter) MainActivity.moviesListView.getAdapter();
                             movieAdapter.addMovie(movie);

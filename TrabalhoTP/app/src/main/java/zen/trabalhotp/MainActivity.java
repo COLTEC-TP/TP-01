@@ -1,22 +1,14 @@
 package zen.trabalhotp;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Rect;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GestureDetectorCompat;
-import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewConfiguration;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity{
@@ -29,14 +21,13 @@ public class MainActivity extends AppCompatActivity{
     private float mDownXfinal = 0;
     private float mDownY;
     private float mDownYfinal = 0;
-    private int mDownPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        final FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,7 +104,7 @@ public class MainActivity extends AppCompatActivity{
                         }
                         mDownXfinal = event.getRawX();
                         mDownYfinal = event.getRawY();
-                        if(Math.abs(mDownXfinal - mDownX) > 500 && !moviesListView.getAdapter().isEmpty()){
+                        if(Math.abs(mDownXfinal - mDownX) > 600 && !moviesListView.getAdapter().isEmpty()){
                             Movie movie = (Movie) moviesListView.getItemAtPosition(moviesListView.getPositionForView(mDownView));
                             if(movie == null){
                                 return false;
@@ -125,6 +116,29 @@ public class MainActivity extends AppCompatActivity{
                             MainActivity.moviesListView.refreshDrawableState();
                             crud.deleteData(id);
                             Snackbar.make(moviesListView, "Movie deleted", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                        }
+                        else {
+                            if(mDownView == null){
+                                return false;
+                            }
+                            mDownXfinal = event.getRawX();
+                            mDownYfinal = event.getRawY();
+
+                            if (Math.abs(mDownYfinal - mDownY) > Math.abs(mDownXfinal - mDownX)) {
+                                if(mDownYfinal - mDownY < 0)
+                                {
+                                    fab.animate().translationY(220).setDuration(100);
+                                }
+                                else {
+                                    fab.animate().translationY(0).setDuration(200);
+                                }
+                                return v.onTouchEvent(event);
+                            }
+                            else{
+                                mDownView.setTranslationX(mDownXfinal - mDownX);
+                                mDownView.animate().translationX(0).setDuration(100);
+                                return true;
+                            }
                         }
                     }
                 }
