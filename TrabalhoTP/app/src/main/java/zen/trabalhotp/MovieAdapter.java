@@ -1,6 +1,7 @@
 package zen.trabalhotp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,19 @@ public class MovieAdapter extends BaseAdapter {
 
     public void addMovie(Movie movie){
         this.movies.add(movie);
+    }
+
+    public void addMovieOn(int position, Movie movie){
+        if(position == 0){
+            this.movies.add(movie);
+        }
+        else{
+            this.movies.add(position, movie);
+        }
+    }
+
+    public boolean contains(Movie movie) {
+        return this.movies.contains(movie);
     }
 
     public void deleteMovie(Movie movie){
@@ -50,7 +64,7 @@ public class MovieAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Movie currentLanguage = this.movies.get(i);
+        Movie movie = this.movies.get(i);
 
         View newView = LayoutInflater.from(this.context).inflate(R.layout.movies, viewGroup, false);
 
@@ -60,20 +74,20 @@ public class MovieAdapter extends BaseAdapter {
         ImageView lblRatingRange = newView.findViewById(R.id.ratingRange);
         TextView lblYear = newView.findViewById(R.id.year);
 
-        lblName.setText(currentLanguage.getName());
-        lblGenre.setText(currentLanguage.getGenre());
-        lblDirector.setText(currentLanguage.getDirector());
-        lblYear.setText(currentLanguage.getYear().toString());
+        lblName.setText(movie.getName());
+        lblGenre.setText(movie.getGenre());
+        lblDirector.setText(movie.getDirector());
+        lblYear.setText(movie.getYear().toString());
 
-        if (currentLanguage.getRatingRange() < 10) {
+        if (movie.getRatingRange() < 10) {
             lblRatingRange.setImageResource(R.drawable.il);
-        } else if (currentLanguage.getRatingRange() < 12) {
+        } else if (movie.getRatingRange() < 12) {
             lblRatingRange.setImageResource(R.drawable.i10);
-        } else if (currentLanguage.getRatingRange() < 14) {
+        } else if (movie.getRatingRange() < 14) {
             lblRatingRange.setImageResource(R.drawable.i12);
-        } else if (currentLanguage.getRatingRange() < 16) {
+        } else if (movie.getRatingRange() < 16) {
             lblRatingRange.setImageResource(R.drawable.i14);
-        } else if (currentLanguage.getRatingRange() < 18) {
+        } else if (movie.getRatingRange() < 18) {
             lblRatingRange.setImageResource(R.drawable.i16);
         } else {
             lblRatingRange.setImageResource(R.drawable.i18);
