@@ -1,10 +1,11 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,10 +16,6 @@ import java.util.ArrayList;
 
 public class FilmeAdapter extends BaseAdapter {
 
-    Filme filme1 = new Filme("dhoawidw", 389271, "jodiwajidw", "jdiwoajdw", "djoiwjdaw");
-    Filme filme2 = new Filme("dhoawidw", 389271, "jodiwajidw", "jdiwoajdw", "djoiwjdaw");
-    Filme filme3 = new Filme("dhoawidw", 389271, "jodiwajidw", "jdiwoajdw", "djoiwjdaw");
-    Filme filme4 = new Filme("dhoawidw", 389271, "jodiwajidw", "jdiwoajdw", "djoiwjdaw");
 
     private ArrayList<Filme> filmes = new ArrayList<Filme>();
     private Context context;
@@ -28,10 +25,10 @@ public class FilmeAdapter extends BaseAdapter {
         this.filmes = new ArrayList<>();
         this.context = context;
 
-        filmes.add(filme1);
-        filmes.add(filme2);
-        filmes.add(filme3);
-        filmes.add(filme4);
+    }
+
+    public void adicionarFilme(Filme filme){
+        this.filmes.add(filme);
     }
 
     @Override
@@ -61,15 +58,29 @@ public class FilmeAdapter extends BaseAdapter {
         TextView lblNome = newView.findViewById(R.id.lbl_filme_nome);
         TextView lblDiretor = newView.findViewById(R.id.lbl_filme_diretor);
         TextView lblAno = newView.findViewById(R.id.lbl_filme_ano);
-        TextView lblGenero = newView.findViewById(R.id.lbl_filme_ano);
-        TextView lblFaixa = newView.findViewById(R.id.lbl_filme_ano);
+        TextView lblGenero = newView.findViewById(R.id.lbl_filme_genero);
+        ImageView lblFaixa = newView.findViewById(R.id.lbl_filme_faixa);
 
         // define o valor de cada um dos campos
         lblNome.setText(currentFilme.getNome());
         lblDiretor.setText(currentFilme.getDiretor());
         lblAno.setText(currentFilme.getAno().toString());
-        lblGenero.setText(currentFilme.getGenero().toString());
-        lblFaixa.setText(currentFilme.getFaixa().toString());
+        lblGenero.setText(currentFilme.getGenero());
+
+        if (currentFilme.getFaixa().equals("Livre")) {
+            lblFaixa.setImageResource(R.drawable.livre_icon);
+        } else if (currentFilme.getFaixa().equals("10 anos")) {
+            lblFaixa.setImageResource(R.drawable.idade10);
+        } else if (currentFilme.getFaixa().equals("12 anos")) {
+            lblFaixa.setImageResource(R.drawable.idade12);
+        } else if (currentFilme.getFaixa().equals("14 anos")) {
+            lblFaixa.setImageResource(R.drawable.idade14);
+        } else if (currentFilme.getFaixa().equals("16 anos")) {
+            lblFaixa.setImageResource(R.drawable.idade16);
+        } else if(currentFilme.getFaixa().equals("18 anos")){
+            lblFaixa.setImageResource(R.drawable.idade18);
+        }
+
 
         return newView;
 

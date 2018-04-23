@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <TextView
         android:id="@+id/lbl_filme_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/lbl_filme_ano"
-        android:text="d"
+        android:textColor="#FFFFFF"
+        android:layout_toEndOf="@+id/lbl_filme_faixa"
+        android:text="@string/filmeNome"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/lbl_filme_ano"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="67dp"
-        android:text="s"
+        android:layout_marginEnd="41dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/filmeAno"
         android:textSize="20dp" />
+
 
     <TextView
         android:id="@+id/lbl_filme_diretor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/lbl_filme_nome"
-        android:text="sr"
+        android:layout_alignBaseline="@+id/lbl_filme_genero"
+        android:layout_alignBottom="@+id/lbl_filme_genero"
+        android:layout_toEndOf="@+id/lbl_filme_faixa"
+        android:text="@string/filmeDiretor"
+        android:textColor="#FFFFFF"
         android:textSize="20dp" />
 
     <TextView
         android:id="@+id/lbl_filme_genero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lbl_filme_ano"
-        android:layout_below="@+id/lbl_filme_ano"
-        android:text="s"
+        android:layout_alignBottom="@+id/lbl_filme_faixa"
+        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="13dp"
+        android:text="@string/filmeGenero"
         android:textSize="20dp" />
 
-    <TextView
+
+    <ImageView
         android:id="@+id/lbl_filme_faixa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/lbl_filme_diretor"
-        android:text="@s"
-        android:textSize="20dp" />
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher_background" />
 
 </RelativeLayout>
 

@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">TrabalhoTP</string>
+    <string name="app_name">Cinema</string>
+    <string name="deletar">Deletar</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="filmeNome">Nome do Filme</string>
+    <string name="filmeAno">Ano de lançamento</string>
+    <string name="filmeDiretor">Diretor</string>
+    <string name="filmeGenero">Genero do Filme</string>
+    <string name="filmeFaixa">Faixa Etária</string>
+    <string name="add">Adicionar Filme</string>
 </resources>

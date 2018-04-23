@@ -1,4 +1,4 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("br.ufmg.coltec.trabalhotp", appContext.getPackageName());
+        assertEquals("br.ufmg.coltec.teste", appContext.getPackageName());
     }
 }

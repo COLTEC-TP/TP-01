@@ -1,6 +1,5 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
-import android.text.Editable;
 
 /**
  * Created by a2016951782 on 04/04/18.
@@ -13,6 +12,7 @@ public class Filme {
     private String diretor;
     private String genero;
     private String faixa;
+    private Integer id;
 
     /**
      * Construtor
@@ -42,7 +42,7 @@ public class Filme {
         return nome;
     }
 
-    public void setNome(Editable name) {
+    public void setNome(String name) {
         this.nome = nome;
     }
 
@@ -50,7 +50,7 @@ public class Filme {
         return ano;
     }
 
-    public void setAno(Editable text) {
+    public void setAno(String text) {
         this.ano = ano;
     }
 
@@ -58,7 +58,7 @@ public class Filme {
         return diretor;
     }
 
-    public void setDiretor(Editable text) {
+    public void setDiretor(String text) {
         this.diretor = diretor;
     }
 
@@ -77,4 +77,13 @@ public class Filme {
     public void setFaixa(String faixa) {
         this.faixa = faixa;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
+

@@ -1,5 +1,6 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -83,6 +84,8 @@ public class TelaAdicionar extends AppCompatActivity {
                 resultado = crud.insereDado(nomeString, diretorString, anoString, generoString, faixaString);
 
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(TelaAdicionar.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

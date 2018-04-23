@@ -1,5 +1,4 @@
-package br.ufmg.coltec.trabalhotp;
-
+package br.ufmg.coltec.teste;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -42,7 +41,7 @@ public class BancoController {
 
     public Cursor carregaDados(){
         Cursor cursor;
-        String[] campos =  {banco.NOME_FILME,banco.DIRETOR,banco.ANO,banco.GENERO,banco.FAIXA};
+        String[] campos =  {banco.ID, banco.NOME_FILME,banco.DIRETOR,banco.ANO,banco.GENERO,banco.FAIXA};
         db = banco.getReadableDatabase();
         cursor = db.query(banco.TABELA, campos, null, null, null, null, null, null);
 
@@ -51,6 +50,13 @@ public class BancoController {
         }
         db.close();
         return cursor;
+    }
+
+    public void deletaRegistro(int id){
+        String where = CriaBanco.ID + "=" + id;
+        db = banco.getReadableDatabase();
+        db.delete(CriaBanco.TABELA,where,null);
+        db.close();
     }
 
 }

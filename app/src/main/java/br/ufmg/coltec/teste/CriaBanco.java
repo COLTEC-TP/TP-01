@@ -1,4 +1,4 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -30,13 +30,13 @@ public class CriaBanco extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String sql = "CREATE TABLE "+TABELA+"("
+        String sql = "CREATE TABLE "+TABELA+" ("
                 + ID + " integer primary key autoincrement,"
                 + NOME_FILME + " text,"
                 + DIRETOR + " text,"
                 + ANO + " text,"
                 + GENERO + " text,"
-                + FAIXA + " text,"
+                + FAIXA + " text"
                 +")";
         db.execSQL(sql);
 
@@ -50,3 +50,4 @@ public class CriaBanco extends SQLiteOpenHelper {
 
     }
 }
+

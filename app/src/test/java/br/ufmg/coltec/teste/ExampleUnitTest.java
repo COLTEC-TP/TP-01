@@ -1,4 +1,4 @@
-package br.ufmg.coltec.trabalhotp;
+package br.ufmg.coltec.teste;
 
 import org.junit.Test;
 
