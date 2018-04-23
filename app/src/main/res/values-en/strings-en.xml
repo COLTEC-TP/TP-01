@@ -22,4 +22,6 @@
     <string name="done">Saved Changes</string>
     <string name="canceled">Canceled</string>
     <string name="failed">Something went wrong, try again later.</string>
+    <string name="save">Save</string>
+
 </resources>
