@@ -34,7 +34,7 @@ public class AddMovieDialog extends DialogFragment {
         name.setHint("Name");
         genre.setHint("Genre");
         director.setHint("Director");
-        ratingRange.setHint("ratingRange");
+        ratingRange.setHint("RatingRange");
         year.setHint("Year");
 
         linearLayout.addView(name);
@@ -49,7 +49,7 @@ public class AddMovieDialog extends DialogFragment {
                 .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         if(name.getText().toString().isEmpty() || genre.getText().toString().isEmpty() || director.getText().toString().isEmpty() || ratingRange.getText().toString().isEmpty() || year.getText().toString().isEmpty()){
-                            Toast.makeText(getContext(), "Campos vazios", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.emptyfield, Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Movie movie = new Movie(name.getText().toString(), genre.getText().toString(), director.getText().toString(), Integer.parseInt(ratingRange.getText().toString()), Integer.parseInt(year.getText().toString()));
@@ -66,7 +66,7 @@ public class AddMovieDialog extends DialogFragment {
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Toast.makeText(getContext(), "Canceled", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), R.string.canceled, Toast.LENGTH_SHORT).show();
                     }
                 }).create();
     }

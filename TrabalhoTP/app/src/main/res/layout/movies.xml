@@ -9,7 +9,7 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome"
+        android:text="@string/name"
         android:textSize="40dp"
         android:textStyle="bold" />
 
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
-        android:text="Genero"
+        android:text="@string/genre"
         android:textSize="20dp" />
 
     <TextView
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/genre"
         android:layout_alignBaseline="@+id/genre"
-        android:text="diretor"
+        android:text="@string/director"
         android:paddingLeft="30dp"
         android:textSize="20dp" />
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrabajoTP</string>
+    <string name="adding">Agregar una película</string>
+    <string name="add">Añadir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="deleting">Eliminar una película</string>
+    <string name="undo">Deshacer</string>
+    <string name="share">Compartir</string>
+    <string name="canceled">Cancelado</string>
+
+    <string name="name">Nombre</string>
+    <string name="genre">Género</string>
+    <string name="director">Director</string>
+    <string name="year">Año</string>
+    <string name="ratingrange">Rango de clasificación</string>
+    <string name="emptyfield">Campo vacío</string>
+</resources>

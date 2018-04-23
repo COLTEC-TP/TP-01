@@ -10,7 +10,7 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome"
+        android:text="@string/name"
         android:textSize="50dp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
-        android:text="Genero"
+        android:text="@string/genre"
         android:textSize="30dp"
         android:layout_centerHorizontal="true"/>
     <TextView
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/genre"
-        android:text="Diretor"
+        android:text="@string/director"
         android:textSize="30dp"
         android:layout_centerHorizontal="true"/>
 
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/director"
-        android:text="year"
+        android:text="@string/year"
         android:textSize="30dp"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

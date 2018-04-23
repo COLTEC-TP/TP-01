@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity{
                                     undoVerification = 0;
                                 }
                             };
-                            Snackbar.make(moviesListView, "Movie deleted", Snackbar.LENGTH_LONG).setAction(R.string.undo, undoListener).show();
+                            Snackbar.make(moviesListView, R.string.deleting, Snackbar.LENGTH_LONG).setAction(R.string.undo, undoListener).show();
                             final Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
