@@ -62,7 +62,6 @@ public class Adapter extends ArrayAdapter<Movie> {
 
         ImageButton delete = convertView.findViewById(R.id.delete);
         delete.setFocusable(false);
-
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
@@ -85,41 +84,6 @@ public class Adapter extends ArrayAdapter<Movie> {
                         });
                 AlertDialog dialog = builder.create();
                 dialog.show();
-            }
-        });
-
-
-        ImageButton share = convertView.findViewById(R.id.share);
-        share.setFocusable(false);
-
-        share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String age = null;
-                if(movie.getAge() == R.drawable.ic_free)
-                    age = "L";
-                if(movie.getAge() == R.drawable.ic_ten)
-                    age = "10";
-                if(movie.getAge() == R.drawable.ic_twelve)
-                    age = "12";
-                if(movie.getAge() == R.drawable.ic_fourteen)
-                    age = "14";
-                if(movie.getAge() == R.drawable.ic_sixteen)
-                    age = "16";
-                if(movie.getAge() == R.drawable.ic_eighteen)
-                    age = "18";
-
-                String dataShare = getContext().getResources().getString(R.string.movie_name) + " " + movie.getName() + "\n"
-                        + getContext().getResources().getString(R.string.movie_director) + " " + movie.getDirector() + "\n"
-                        + getContext().getResources().getString(R.string.movie_rating) + " " + age + "\n"
-                        + getContext().getResources().getString(R.string.movie_genre) + " " + movie.getGenre() + "\n"
-                        + getContext().getResources().getString(R.string.movie_date) + " " + movie.getDate();
-
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, dataShare);
-                sendIntent.setType("text/plain");
-                getContext().startActivity(sendIntent);
             }
         });
 

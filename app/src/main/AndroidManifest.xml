@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddMovie" />
-        <activity android:name=".EditMovie"></activity>
+        <activity android:name=".EditMovie" android:parentActivityName=".Share"/>
+        <activity android:name=".Share" android:parentActivityName=".Main"/>
     </application>
 
 </manifest>
