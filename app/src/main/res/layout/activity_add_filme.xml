@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mtgo007.movies.AddFilme"
+    android:background="#000">
+
+
+
+    <TextView
+        android:id="@+id/adicionar_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="35dp"
+        android:text="@string/add_movie"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:layout_marginTop="70dp"
+
+        />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/Logo"
+        android:src="@drawable/addlogo"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/addfilme-Backgroud"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop" />
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+
+    >
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/filme_titulo"
+        android:background="@drawable/rounded_white"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/nome"
+
+        />
+    <Spinner
+        android:id="@+id/genero"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/rounded_white"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:textSize="14sp"
+        android:spinnerMode="dialog"
+
+        />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/filme_diretor"
+        android:background="@drawable/rounded_white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:inputType="text"
+        android:id="@+id/diretor"
+        android:layout_marginBottom="10dp"
+
+        />
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginEnd="15dp"-->
+        <!--android:layout_marginStart="15dp"-->
+        <!--android:background="@drawable/rounded_white"-->
+        <!--android:drawablePadding="5dp"-->
+        <!--android:hint="Faixa Etária :"-->
+        <!--android:paddingStart="10dp"-->
+        <!--android:textSize="14sp"-->
+
+        <!--/>-->
+
+    <Spinner
+        android:id="@+id/faixaEtaria"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/rounded_white"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:hint="Faixa Etária :"
+        android:textSize="14sp"
+        android:spinnerMode="dialog"
+
+        />
+
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/filme_ano"
+        android:background="@drawable/rounded_white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="14sp"
+        android:drawablePadding="5dp"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:id="@+id/ano"
+        android:layout_marginBottom="10dp"
+
+        />
+
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/add"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>
