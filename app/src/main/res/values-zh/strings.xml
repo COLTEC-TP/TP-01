@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">电影院</string>
+    <string name="deletar">删除</string>
+    <string name="compartilhar">分享</string>
+    <string name="filmeNome">电影名称</string>
+    <string name="filmeAno">发布年份</string>
+    <string name="filmeDiretor">导演</string>
+    <string name="filmeGenero">电影类型</string>
+    <string name="filmeFaixa">年龄范围</string>
+    <string name="add">添加电影</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">кино</string>
+    <string name="deletar">удалять</string>
+    <string name="compartilhar">доля</string>
+    <string name="filmeNome">название фильма</string>
+    <string name="filmeAno">год выпуска</string>
+    <string name="filmeDiretor">директор</string>
+    <string name="filmeGenero">жанр фильма</string>
+    <string name="filmeFaixa">Возрастная группа</string>
+    <string name="add">добавить фильм</string>
+</resources>

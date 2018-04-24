@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cinema</string>
+    <string name="deletar">Cancellare</string>
+    <string name="compartilhar">Quota</string>
+    <string name="filmeNome">Nome del film</string>
+    <string name="filmeAno">Anno di Rilascio</string>
+    <string name="filmeDiretor">Direttore</string>
+    <string name="filmeGenero">Genere Cinematografico</string>
+    <string name="filmeFaixa">Fascia d età</string>
+    <string name="add">Aggiungi film</string>
+</resources>
