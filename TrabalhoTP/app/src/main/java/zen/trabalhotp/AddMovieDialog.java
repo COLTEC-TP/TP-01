@@ -31,11 +31,11 @@ public class AddMovieDialog extends DialogFragment {
         year.setInputType(InputType.TYPE_CLASS_NUMBER);
         ratingRange.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-        name.setHint("Name");
-        genre.setHint("Genre");
-        director.setHint("Director");
-        ratingRange.setHint("RatingRange");
-        year.setHint("Year");
+        name.setHint(R.string.name);
+        genre.setHint(R.string.genre);
+        director.setHint(R.string.director);
+        ratingRange.setHint(R.string.ratingrange);
+        year.setHint(R.string.year);
 
         linearLayout.addView(name);
         linearLayout.addView(genre);

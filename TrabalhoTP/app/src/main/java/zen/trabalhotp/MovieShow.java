@@ -63,7 +63,7 @@ public class MovieShow extends AppCompatActivity {
     private Intent createShareIntent() {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         shareIntent.setType("text/plain");
-        shareIntent.putExtra(Intent.EXTRA_TEXT, R.string.name + activityBundle.getString("name")+ "\n" + R.string.genre +  activityBundle.getString("genre")+ "\n" + R.string.director + activityBundle.getString("director")+ "\n" + R.string.ratingrange + activityBundle.getString("RatingRange")+ "\n" + R.string.year + activityBundle.getString("year"));
+        shareIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.name) + ": " + activityBundle.getString("name")+ "\n" + getResources().getString(R.string.genre) + ": " +  activityBundle.getString("genre")+ "\n" + getResources().getString(R.string.director) + ": " + activityBundle.getString("director")+ "\n" + getResources().getString(R.string.ratingrange) + ": " + activityBundle.getString("ratingRange")+ "\n" + getResources().getString(R.string.year) + ": " + activityBundle.getString("year"));
         return shareIntent;
     }
 }
