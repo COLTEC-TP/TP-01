@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">映画</string>
+    <string name="deletar">削除</string>
+    <string name="compartilhar">シェア</string>
+    <string name="filmeNome">映画の名前</string>
+    <string name="filmeAno">リリース年</string>
+    <string name="filmeDiretor">監督</string>
+    <string name="filmeGenero">映画ジャンル</string>
+    <string name="filmeFaixa">年齢層</string>
+    <string name="add">映画を追加する</string>
+</resources>

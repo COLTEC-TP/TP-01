@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">영화관</string>
+    <string name="deletar">삭제하다</string>
+    <string name="compartilhar">공유하다</string>
+    <string name="filmeNome">영화 이름</string>
+    <string name="filmeAno">출시 연도</string>
+    <string name="filmeDiretor">감독</string>
+    <string name="filmeGenero">영화 장르</string>
+    <string name="filmeFaixa">연령 그룹</string>
+    <string name="add">영화 추가</string>
+</resources>

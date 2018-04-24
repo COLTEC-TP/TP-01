@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1">
+
+    <EditText
+        android:id="@+id/nomeDoFilme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/filmeNome" />
+
+    <EditText
+        android:id="@+id/diretorDoFilme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nomeDoFilme"
+        android:layout_below="@+id/nomeDoFilme"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/filmeDiretor" />
+
+    <EditText
+        android:id="@+id/anoDoFilme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/diretorDoFilme"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:inputType="text|number"
+        android:hint="@string/filmeAno" />
+
+    <Spinner
+        android:id="@+id/genero_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/anoDoFilme"
+        />
+
+    <Button
+        android:id="@+id/adicionar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/faixa_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/genero_spinner"
+        android:layout_marginTop="31dp" />
+
+</RelativeLayout>

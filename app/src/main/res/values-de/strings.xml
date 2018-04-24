@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Kino</string>
+    <string name="deletar">Löschen</string>
+    <string name="compartilhar">Teilen</string>
+    <string name="filmeNome">Film Name</string>
+    <string name="filmeAno">Erscheinungsjahr</string>
+    <string name="filmeDiretor">Direktor</string>
+    <string name="filmeGenero">Film-Genre</string>
+    <string name="filmeFaixa">Altersgruppe</string>
+    <string name="add">Film hinzufügen</string>
+</resources>
