@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@drawable/fundocinza"
+    tools:context="com.example.gui.tp.cadastrarFilmes">
+
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="102dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:textColor="#00FF00" />
+
+    <EditText
+        android:id="@+id/etGenero"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNome"
+        android:layout_toEndOf="@+id/textView2"
+        android:textColor="#00FF00" />
+
+    <EditText
+        android:id="@+id/etDiretor"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etGenero"
+        android:layout_below="@+id/etGenero"
+        android:textColor="#00FF00" />
+
+    <EditText
+        android:id="@+id/etAno"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etDiretor"
+        android:layout_below="@+id/etDiretor"
+        android:textColor="#00FF00" />
+
+
+    <Spinner
+        android:id="@+id/etFaixa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etAno"
+        android:layout_below="@+id/etAno"
+        android:textColor="#00FF00"
+        android:layout_marginTop="20dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etNome"
+        android:layout_alignBottom="@+id/etNome"
+        android:layout_toStartOf="@+id/btnAdd"
+        android:text="@string/nome"
+        android:textColor="#00FF00"
+        android:textSize="20dp"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etGenero"
+        android:layout_alignBottom="@+id/etGenero"
+        android:layout_alignStart="@+id/textView"
+        android:text="@string/genero"
+        android:textColor="#00FF00"
+        android:textSize="20dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etDiretor"
+        android:layout_alignBottom="@+id/etDiretor"
+        android:layout_alignStart="@+id/textView2"
+        android:text="@string/diretor"
+        android:textColor="#00FF00"
+        android:textSize="20dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etAno"
+        android:layout_alignBottom="@+id/etAno"
+        android:layout_alignStart="@+id/textView3"
+        android:text="@string/ano"
+        android:textColor="#00FF00"
+        android:textSize="20dp"
+        android:id="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignTop="@+id/etFaixa"
+        android:text="@string/faixa"
+        android:textColor="#00FF00"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFaixa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:textSize="20dp"
+        android:textColor="#00FF00"
+        android:background="#565656"
+        android:text="@string/adicionarFilmeTelaCadastro" />
+
+
+</RelativeLayout>
