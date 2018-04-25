@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">tp</string>
+    <string name="FORMULARIO_submit">Submit</string>
+    <string name="FORMULARIO_areYouSure">Are you sure?</string>
+    <string name="FORMULARIO_PositiveButton">Yes</string>
+    <string name="FORMULARIO_NegativeButton">No</string>
+    <string name="FORMULARIO_MensagemEnviado">Submitted</string>
+    <string name="FORMULARIO_MensagemNaoEnviada">not submitted</string>
+    <string name="FORMULARIO_BUTTON_Enviar">Send: </string>
+
+
+    <string name="adicionarFilme">Add Movie</string>
+    <string name="adicionarFilmeTelaCadastro">Add Movie</string>
+    <string name="excluirCompartilhar">Delete     Share</string>
+    <string name="mensagemParaProfessor">Unfortunately we had a problem getting the data from a specific movie and moving on to this activity. So it will not be possible to delete and share the movie you selected. However, for illustration purposes, you can use the movie Matrix! You can share and delete it! Enjoy!</string>
+    <string name="matrix">Movie Name: Matrix\nGeneration: Fiction\nDirector: Lilly Wachowski\nAccording Board: 12 years\nYear: 1999</string>
+    <string name="botaoexcluir">Delete</string>
+    <string name="botaocompartilhar">Share</string>
+    <string name="nome">Name: </string>
+    <string name="genero">Genre: </string>
+    <string name="diretor">Director: </string>
+    <string name="faixa">Age: </string>
+    <string name="ano">Year: </string>
+
+
+
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">tp</string>
+    <string name="FORMULARIO_submit">Enviar</string>
+    <string name="FORMULARIO_areYouSure">Voce tem certeza?</string>
+    <string name="FORMULARIO_PositiveButton">Sim</string>
+    <string name="FORMULARIO_NegativeButton">Nao</string>
+    <string name="FORMULARIO_MensagemEnviado">Enviado</string>
+    <string name="FORMULARIO_MensagemNaoEnviada">Nao enviado</string>
+    <string name="FORMULARIO_BUTTON_Enviar">Enviar: </string>
+
+
+    <string name="adicionarFilme">Adicionar Filme</string>
+    <string name="adicionarFilmeTelaCadastro">Adicionar Filme</string>
+    <string name="excluirCompartilhar">Excluir     Compartilhar</string>
+    <string name="mensagemParaProfessor">Infelizmente tivemos um problema em pegar os dados de um filme especifico e passar para esta activity. Portanto nao sera possivel excluir e compartilhar o filme que voce selecionou. Contudo, para efeito de ilustracao, voce pode usar o filme Matrix! Voce pode compartilhar e exclui-lo! Aproveite!</string>
+    <string name="matrix">Nome do filme: Matrix\nGenero: Ficcao\nDiretor: Lilly Wachowski\nFaixa Etaria: 12 anos\nAno: 1999</string>
+    <string name="botaoexcluir">Excluir</string>
+    <string name="botaocompartilhar">Compartilhar</string>
+    <string name="nome">Nome: </string>
+    <string name="genero">Genero: </string>
+    <string name="diretor">Diretor: </string>
+    <string name="faixa">Faixa: </string>
+    <string name="ano">Ano: </string>
+
+
+</resources>
