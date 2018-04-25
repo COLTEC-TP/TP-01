@@ -12,33 +12,37 @@ import android.widget.ImageButton;
 
 public class Share extends AppCompatActivity {
 
-    private long id = 0;
-    private static final int LOADER_ID = 1;
+    private Movie movie;
+    ShareActionProvider shareProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
 
-        Bundle activityBundle = this.getIntent().getExtras();
-        id = activityBundle.getLong("id");
+        final int id = getIntent().getIntExtra("id", 0);
+        DataBaseController crud = new DataBaseController(getBaseContext());
+        System.out.println(id);
+        this.movie = crud.loadData(id);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_share, menu);
-        MenuItem shareItem = menu.findItem(R.id.action_share);
-        ShareActionProvider shareProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
+        MenuItem item = menu.findItem(R.id.action_share);
+        shareProvider = (ShareActionProvider)MenuItemCompat.getActionProvider(item);
 
-        // criar intent que será exibida pelo provider
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/*");
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        String dataShare = getBaseContext().getResources().getString(R.string.movie_name) + " " + movie.getName() + "\n"
+                + getBaseContext().getResources().getString(R.string.movie_director) + " " + movie.getDirector() + "\n"
+                + getBaseContext().getResources().getString(R.string.movie_genre) + " " + movie.getGenre() + "\n"
+                + getBaseContext().getResources().getString(R.string.movie_rating) + " " + AddMovie.ages[movie.getAge()] + "\n"
+                + getBaseContext().getResources().getString(R.string.movie_date) + " " + movie.getDate();
 
-
-        // exibe a intent
-        shareProvider.setShareIntent(intent);
-
-        return super.onCreateOptionsMenu(menu);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, dataShare);
+        shareProvider.setShareIntent(sharingIntent);
+        return true;
     }
 
     @Override
@@ -46,18 +50,13 @@ public class Share extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id){
-
             case R.id.action_edit:
-                // Editar banco de dados
-
-                Intent edit = new Intent(Share.this, EditMovie.class);
-                //edit.putExtra("id", movie.getId());
-                startActivity(edit);
-
+                Intent edit = new Intent(getBaseContext(), EditMovie.class);
+                edit.putExtra("id", movie.getId());
+                getBaseContext().startActivity(edit);
+                finish();
                 return true;
-
             default: return super.onOptionsItemSelected(item);
         }
-
     }
 }

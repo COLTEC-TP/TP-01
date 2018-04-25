@@ -137,8 +137,10 @@ public class DataBaseController {
         String genre = cursor.getString(idGenre);
         int date = cursor.getInt(idDate);
         int age = cursor.getInt(idAge);
+        int idMovie = cursor.getInt(idId);
 
         movie = new Movie(name, autor, genre, age, date);
+        movie.setId(idMovie);
 
         this.db.close();
         return movie;

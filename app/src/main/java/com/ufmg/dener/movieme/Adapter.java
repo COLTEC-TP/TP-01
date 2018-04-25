@@ -48,18 +48,6 @@ public class Adapter extends ArrayAdapter<Movie> {
         ImageView age = convertView.findViewById(R.id.age);
         age.setImageDrawable(getContext().getDrawable(movie.getAge()));
 
-        ImageButton edit = convertView.findViewById(R.id.edit);
-        edit.setFocusable(false);
-
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent edit = new Intent(getContext(), EditMovie.class);
-                edit.putExtra("id", movie.getId());
-                getContext().startActivity(edit);
-            }
-        });
-
         ImageButton delete = convertView.findViewById(R.id.delete);
         delete.setFocusable(false);
         delete.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +72,15 @@ public class Adapter extends ArrayAdapter<Movie> {
                         });
                 AlertDialog dialog = builder.create();
                 dialog.show();
+            }
+        });
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sharing = new Intent(getContext(), Share.class);
+                sharing.putExtra("id", movie.getId());
+                getContext().startActivity(sharing);
             }
         });
 

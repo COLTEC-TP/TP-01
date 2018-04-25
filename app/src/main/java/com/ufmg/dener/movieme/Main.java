@@ -42,20 +42,6 @@ public class Main extends AppCompatActivity implements LoaderManager.LoaderCallb
         this.adapter = new Adapter(Main.this, movies);
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent sharing = new Intent(Main.this, Share.class);
-
-                Bundle args = new Bundle();
-                args.putLong("id", id);
-
-                sharing.putExtras(args);
-
-                startActivity(sharing);
-            }
-        });
-
         getLoaderManager().initLoader(LOADER_ID, null, this);
     }
 
