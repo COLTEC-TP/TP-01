@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Share extends AppCompatActivity {
 
@@ -24,6 +26,20 @@ public class Share extends AppCompatActivity {
         DataBaseController crud = new DataBaseController(getBaseContext());
         System.out.println(id);
         this.movie = crud.loadData(id);
+
+        TextView name = findViewById(R.id.name);
+        TextView date = findViewById(R.id.date);
+        TextView director = findViewById(R.id.autor);
+        TextView genre = findViewById(R.id.genre);
+        ImageView age = findViewById(R.id.age);
+
+        name.setText(movie.getName());
+        date.setText(String.valueOf(movie.getDate()));
+        director.setText(movie.getDirector());
+        genre.setText(movie.getGenre());
+        age.setImageDrawable(getBaseContext().getDrawable(MovieContract.AGES_IC[movie.getAge()]));
+
+
     }
 
     @Override
@@ -36,7 +52,7 @@ public class Share extends AppCompatActivity {
         String dataShare = getBaseContext().getResources().getString(R.string.movie_name) + " " + movie.getName() + "\n"
                 + getBaseContext().getResources().getString(R.string.movie_director) + " " + movie.getDirector() + "\n"
                 + getBaseContext().getResources().getString(R.string.movie_genre) + " " + movie.getGenre() + "\n"
-                + getBaseContext().getResources().getString(R.string.movie_rating) + " " + AddMovie.ages[movie.getAge()] + "\n"
+                + getBaseContext().getResources().getString(R.string.movie_rating) + " " + MovieContract.AGES[movie.getAge()] + "\n"
                 + getBaseContext().getResources().getString(R.string.movie_date) + " " + movie.getDate();
 
         sharingIntent.setType("text/plain");

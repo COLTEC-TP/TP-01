@@ -14,8 +14,6 @@ public class AddMovie extends AppCompatActivity {
 
     public static String[] genres;
 
-    public static final String[] ages = {"L", "10", "12", "14", "16", "18"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +28,7 @@ public class AddMovie extends AppCompatActivity {
         final Spinner age = findViewById(R.id.age);
 
         ArrayAdapter<String> adapterAge = new ArrayAdapter<>(AddMovie.this,
-                android.R.layout.simple_spinner_item, ages);
+                android.R.layout.simple_spinner_item, MovieContract.AGES);
         adapterAge.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         age.setAdapter(adapterAge);
 

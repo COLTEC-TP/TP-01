@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context=".Share">
 
@@ -11,7 +12,7 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
+        android:layout_marginVertical="30dp"
         android:paddingHorizontal="20dp"
         android:gravity="center"
         android:textSize="30sp"
@@ -19,8 +20,59 @@
         android:text="Nome do Filme"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        >
+
+        <TextView
+            android:id="@+id/autor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="20dp"
+            android:textSize="25sp"
+            android:textColor="#333"
+            android:text="Autor"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:textSize="20sp"
+            android:textColor="#333"
+            android:text="2018"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="20sp"
+            android:textColor="#333"
+            android:text="Comédia Romântica"/>
+
+        <ImageButton
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_free"
+            />
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

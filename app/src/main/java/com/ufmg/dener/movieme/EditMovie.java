@@ -36,7 +36,7 @@ public class EditMovie extends AppCompatActivity {
 
 
         ArrayAdapter<String> adapterAge = new ArrayAdapter<>(EditMovie.this,
-                android.R.layout.simple_spinner_item, AddMovie.ages);
+                android.R.layout.simple_spinner_item, MovieContract.AGES);
         adapterAge.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         age.setAdapter(adapterAge);
         age.setSelection(movie.getAge());

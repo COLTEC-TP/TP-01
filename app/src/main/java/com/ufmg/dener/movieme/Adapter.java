@@ -46,7 +46,7 @@ public class Adapter extends ArrayAdapter<Movie> {
         date.setText(String.valueOf( movie.getDate() ));
 
         ImageView age = convertView.findViewById(R.id.age);
-        age.setImageDrawable(getContext().getDrawable(movie.getAge()));
+        age.setImageDrawable(getContext().getDrawable( MovieContract.AGES_IC[movie.getAge()]));
 
         ImageButton delete = convertView.findViewById(R.id.delete);
         delete.setFocusable(false);

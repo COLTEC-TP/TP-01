@@ -82,31 +82,7 @@ public class DataBaseController {
                 String autor = cursor.getString(idAutor);
                 String genre = cursor.getString(idGenre);
                 int date = cursor.getInt(idDate);
-                int age;
-
-                switch (cursor.getInt(idAge)) {
-                    case 0:
-                        age = R.drawable.ic_free;
-                        break;
-                    case 1:
-                        age = R.drawable.ic_ten;
-                        break;
-                    case 2:
-                        age = R.drawable.ic_twelve;
-                        break;
-                    case 3:
-                        age = R.drawable.ic_fourteen;
-                        break;
-                    case 4:
-                        age = R.drawable.ic_sixteen;
-                        break;
-                    case 5:
-                        age = R.drawable.ic_eighteen;
-                        break;
-                    default:
-                        age = R.drawable.ic_launcher_background;
-                        break;
-                }
+                int age = cursor.getInt(idAge);
 
                 movie = new Movie(name, autor, genre, age, date);
                 movie.setId(cursor.getInt(idId));
@@ -137,10 +113,9 @@ public class DataBaseController {
         String genre = cursor.getString(idGenre);
         int date = cursor.getInt(idDate);
         int age = cursor.getInt(idAge);
-        int idMovie = cursor.getInt(idId);
 
         movie = new Movie(name, autor, genre, age, date);
-        movie.setId(idMovie);
+        movie.setId(cursor.getInt(idId));
 
         this.db.close();
         return movie;
