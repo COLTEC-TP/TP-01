@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Me</string>
+
+    <string name="verfilmes">see movies</string>
+
+    <!--NewMovieActivity-->
+    <string name="Porfavorpreencha">Please fill all fields</string>
+    <string name="Nomedofilme">Film´s name</string>
+    <string name="Classificaçãoindicativa">Parental rating</string>
+    <string name="Diretor">Director</string>
+    <string name="Gênero">Genre</string>
+    <string name="Anodelançamento">Release year</string>
+    <string name="Criar">Create</string>
+
+    <!-- FilmeDetalesActivity-->
+    <string name="Vejaessefilme">Watch This Movie: </string>
+    <string name="filmede">movie of </string>
+    <string name="dodiretor"> of the cinema director </string>
+    <string name="livre">. Suitable for all audiences </string>
+    <string name="maiores">. Suitable for larger than </string>
+    <string name="anos"> years.</string>
+    <string name="Algoerrado">Something Wrong Happened</string>
+
+    <!-- ListActivity-->
+    <string name="removido"> removed!</string>
+    <string name="Osseusfilmes">Your movies</string>
+    <string name="Selecioneexcluir">Select someone to delete</string>
+
+    <string name="Ajuda">Help</string>
+    <string name="textoAjuda">Click the trash item in the action bar to switch to removal mode and click it again to return to normal mode </string>
+
+    <string name="desejaremover">You want to remove the movie</string>
+    <string name="dasualista"> from your list?</string>
+    <string name="Remover">Remove</string>
+    <string name="sim">yes</string>
+    <string name="Cancelar">Cancel</string>
+    <string name="Nadaremovido">Nothing removed</string>
+    <string name="nao">No</string>
+    <string name="sair">Do you want to leave?</string>
+
+</resources>

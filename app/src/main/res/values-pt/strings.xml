@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Movie Me</string>
+
+    <string name="verfilmes">Ver Filmes</string>
+
+    <!--NewMovieActivity-->
+    <string name="Porfavorpreencha">Por favor, preencha todos os campos</string>
+    <string name="Nomedofilme">Nome do filme</string>
+    <string name="Classificaçãoindicativa">Classificação indicativa</string>
+    <string name="Diretor">Diretor</string>
+    <string name="Gênero">Gênero</string>
+    <string name="Anodelançamento">Ano de lançamento</string>
+    <string name="Criar">Criar</string>
+
+    <!-- FilmeDetalesActivity-->
+    <string name="Vejaessefilme">Veja esse filme:</string>
+    <string name="filmede">, filme de</string>
+    <string name="dodiretor">do diretor</string>
+    <string name="livre">. Indicado para todos os públicos.</string>
+    <string name="maiores">. Indicado para maiores de </string>
+    <string name="anos">anos.</string>
+    <string name="Algoerrado">Algo Errado Aconteceu</string>
+
+    <!-- ListActivity-->
+    <string name="removido">removido!</string>
+    <string name="Osseusfilmes">Os seus filmes</string>
+    <string name="Selecioneexcluir">Selecione um filme para excluir</string>
+
+    <string name="Ajuda">Ajuda</string>
+    <string name="textoAjuda">Clique na item lixeira na barra de ações para alternar para o modo de remoção e clique nele novamente para retornar ao modo normal</string>
+
+    <string name="desejaremover">Você deseja remover o filme </string>
+    <string name="dasualista">da sua lista?</string>
+    <string name="Remover">Remover</string>
+    <string name="sim">Sim</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Nadaremovido">Nada removido</string>
+    <string name="nao">Não</string>
+    <string name="sair">Você deseja sair?</string>
+
+</resources>

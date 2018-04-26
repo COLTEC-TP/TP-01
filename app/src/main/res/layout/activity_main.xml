@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall1"
+
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+
+        android:id="@+id/rel_editor"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/layout_shadow_white">
+
+
+        <TextView
+            android:id="@+id/msgbv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="MovieMe"
+            android:textColor="#2d3436"
+            android:textSize="40dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bmain"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="@string/verfilmes"
+        android:textColor="#2d3436"
+        android:textSize="20sp" />
+
+
+
+</RelativeLayout>

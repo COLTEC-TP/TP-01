@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rel_editor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/layout_shadow_white"
+        android:padding="5dp">
+        
+        <ImageView
+            style="@style/foto"
+            android:layout_centerVertical="true"
+            android:id="@+id/tarja"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            style="@style/nome_fil"
+            android:layout_toRightOf="@id/tarja"
+            android:id="@+id/nome_fil"
+            android:text="Um filme incrível e premiado qualquer" />
+
+        <TextView
+            style="@style/nome_dir"
+            android:layout_height="0dp"
+            android:layout_alignLeft="@id/nome_fil"
+            android:layout_below="@id/nome_fil"
+            android:id="@+id/nome_dir"
+            android:text="Guilherme deodoro" />
+
+        <TextView
+            style="@style/genero"
+            android:layout_alignLeft="@id/nome_fil"
+            android:layout_below="@id/nome_dir"
+            android:id="@+id/genero"
+            android:text="Drama" />
+
+        <TextView
+            style="@style/lançamento"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/nome_dir"
+            android:id="@+id/ano"
+            android:text="1999" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
